@@ -1,0 +1,40 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Hi, you can reverse any number you enter in this input box!!!</p>
+    <br>
+    <label for="">Enter your number:</label>
+    <input type="number" id="n1" style="text-align: center" placeholder="initial num">
+    <button onclick="act(document.getElementById('n1').value,0,0)">Reverse</button>
+    <br><br>
+    <label for="">Reversed number is:</label>
+    <p id="n2"></p>
+</body>
+<script>
+    
+    
+    function act(a,b,s)
+
+    {
+        debugger
+
+        if(a>=10){
+            var b=(a%10);
+            var a=Math.floor(a/10);
+            var s=b+(s*10);
+            act(a,b,s);
+        } 
+        else{
+            var s=a+(s*10);
+            document.getElementById('n2').innerText=s;
+        }
+        
+    }
+</script>
+
+</html>
